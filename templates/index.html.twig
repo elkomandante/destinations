@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "style/style.css"/>
+    <link rel = "stylesheet" href = "style/responsive.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+</head>
+
+<body>
+
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-md-12" id = "socials-menu">
+            <div class = "row">
+                <div class = "col-lg-1 col-md-1 col-sm-1">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class = "col-lg-1 col-md-1 col-sm-1">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-12">
+            <div  id = "desktop-nav-menu">
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <li> LOGO </li>
+                    </div>
+                    <div class = "col-md-8">
+                        <ul>
+                            <li> <a class = "active" href = "#"> ПОЧЕТНА </a> </li>
+                            <li> <a href = "/destinations"> ДЕСТИНАЦИИ </a> </li>
+                            <li> <a href = "#"> КОНТАКТ </a></li>
+                            <li> <i class="fas fa-search"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id = "mobile-nav-menu">
+                <li> LOGO </li>
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <ul class = "mobile-dropdown">
+        <li>Почетна</li>
+        <li>Дестинации</li>
+        <li>Контакт</li>
+    </ul>
+    <div class = "row">
+        <div class = "col-md-12"  style = "padding:0;">
+            <div id = "destinations-map">
+                <div class = "heading">
+                    <h1>ДА ПАТУВАШ ЗНАЧИ ДА ЖИВЕЕШ</h1>
+                    <h3>Не ти треба магија за да исчезнеш. Се што ти треба е добра дестинација.</h3>
+                    <div style = "display:flex; justify-content:center;"><div class = "show-on-map">Прикажи дестинации</div> </div>
+                </div>
+                <div class="swiper-slide" style = "background-image:url('images/banner-1.jpg'); min-height:600px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-md-12">
+            <div id = "content">
+                <div class = "last-added">
+                    <h3>Последно додадени дестинации</h3>
+                </div>
+                <div class="gallery js-flickity">
+                    <div class="gallery-cell"><img src = "images/budapest-thumb.jpg"/><h5> Будимпешта <i class="fas fa-angle-down"></i> </h5><h6>Нова дестинација!</h6></div>
+                    <div class="gallery-cell"><img src = "images/venice-thumb.jpg"/> <h5> Венеција <i class="fas fa-angle-down"></i> </h5><h6>Нова дестинација!</h6></div>
+                    <div class="gallery-cell"><img src = "images/budapest-thumb.jpg"/><h5> Будимпешта <i class="fas fa-angle-down"></i> </h5><h6>Нова дестинација!</h6></div>
+                    <div class="gallery-cell"><img src = "images/venice-thumb.jpg"/> <h5> Венеција<i class="fas fa-angle-down"></i> </h5><h6>Нова дестинација!</h6></div>
+                    <div class="gallery-cell"><img src = "images/budapest-thumb.jpg"/><h5> Будимпешта <i class="fas fa-angle-down"></i></h5><h6>Нова дестинација!</h6></div>
+                    <div class="gallery-cell"><img src = "images/venice-thumb.jpg"/> <h5> Венеција <i class="fas fa-angle-down"></i></h5><h6>Нова дестинација!</h6></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-md-12">
+            <div id = "holidays-type" style = "background-image:url('images/holiday-tips.jpg');">
+                <h2> Видови патувања </h2>
+                <div class = "row holidays-type">
+                    <div class = "col-md-2">
+                        <div class = "summer hoverColor">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h6> Beach </h6>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class = "city hoverColor">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h6> City </h6>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class = "winter hoverColor">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h6> Adventure </h6>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class = "adventure hoverColor">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h6> Winter </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-md-12">
+            <div id = "facts">
+                <h3> Интересни факти за патувањата </h3>
+                <div class = "row">
+                    <div class = "col-lg-4 col-md-4 col-sm-4">
+                        <div class = "fact first">
+                            <p> Некои истражувања тврдат дека луѓето кои често патуваат се подобри во решавањето на проблемите со кои
+                                се среќаваат во секојдневниот живот. </p>
+                        </div>
+                    </div>
+                    <div class = "col-lg-4 col-md-4 col-sm-4">
+                        <div class = "fact fact-center">
+                            <p> На Санторини постојат околу 250 цркви и капели. </p>
+                        </div>
+                    </div>
+                    <div class = "col-lg-4 col-md-4 col-sm-4">
+                        <div class = "fact last">
+                            <p> Користењето на годишниот одмор за некој вид патување наместо класично повеќедневно излежување во топлината
+                                на својот дом докажано го намалува ризикот од добивање срцев удар.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-md-12">
+            <div id = "footer">
+                <ul>
+                    <li> <a href = "#"> Home &nbsp; :: &nbsp; </a> </li>
+                    <li> <a href = "#"> Destinations &nbsp; :: &nbsp; </a> </li>
+                    <li> <a href = "#"> Contact Us </a> </li>
+                </ul>
+                <p>Copyright @voyage. All Right Reserved.</p>
+                <div class="arrow-up" onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-up"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="js/sliders.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+    });
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+</body>
+</html>

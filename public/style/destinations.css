@@ -1,0 +1,205 @@
+.container-fluid a {
+    color: #323648;
+}
+
+.container-fluid a:hover {
+    color: #323648;
+    text-decoration: none;
+}
+
+.search-for-destination {
+    text-align: center;
+    background-color:#2c3e50;
+}
+
+.search-input,
+.search-input {
+    height: 40px;
+    width: 60%;;
+    padding-left: 2%;
+    font-style: italic;
+    border:1px solid #efefef;
+}
+
+.search-for-destination > button {
+    color: #fff;
+    background-color:#1dd2af;
+    border: none;
+    padding: 1%;
+    font-size: 1.4rem;
+}
+
+.last-added,
+.destinations,
+.destination-heading {
+    width: 100%;
+    display: table;
+    height: 50px;
+    background: #1dd2af;
+}
+
+.destinations {
+    margin-top: 1%;
+}
+
+.last-added>h5,
+.destinations>h5 {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 2%;
+    color:#fff;
+    font-size: 1.4rem;
+}
+
+.destinations-box {
+    height: 170px;
+    border: 1px solid #d1d1d1;
+    margin-top: 5%;
+}
+
+.destination-map {
+    width: 40%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+
+.destination-description {
+    width: 60%;
+    float: right;
+    padding-left: 5%;
+    text-align: justify;
+    padding-right: 5%;
+}
+
+.destination-description h5{
+    font-family: 'roboto';
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.destination-description p {
+    font-family: 'roboto';
+    font-size: 12px;
+    
+}
+
+.destination-description a {
+    float: right;
+    color: #1dd2af;
+    font-weight: bold
+    
+}
+
+.destination-heading h2 {
+    color:#fff;
+    padding-left: 5%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.description-map {
+    width: 25%;
+    float: left;
+    margin-top: 1%;
+}
+
+.description-text {
+    width: 75%;
+    float: left;
+    text-align:justify;
+    padding:1%;
+    font-weight: 500;
+    font-family: 'roboto';
+    font-style: italic;
+    padding-left: 3%;
+    margin-top:3%;
+    
+
+}
+
+.row-centered {
+    text-align:center;
+    background-image:url('../images/concrete-texture.png')
+}
+
+.col-centered { 
+    display:inline-block; 
+    float:none !important; 
+    margin-right:-4px;
+    background-color:#fff;
+}
+
+.nearby, .currency, .facts {
+    font-family: 'roboto';
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 2%;
+}
+
+.fas.fa-map-marked-alt,
+.fas.fa-euro-sign {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    float: left;
+
+}
+
+.fas.fa-euro-sign {
+    float: none;
+    padding-right: 1%;
+}
+
+.col-centered span,
+.collapse-item a {
+    color:#1dd2af;
+    font-weight: 500;
+    font-family: 'roboto'
+}
+
+.collapse-item a,
+.fas.fa-caret-down {
+    color:#2c3e50;
+}
+
+
+.collapse-item:first-of-type {
+    margin-top:5%;
+}
+
+.collapse-item {
+    margin-top: 2%;
+}
+
+.collapse-item a {
+    font-size: 2rem
+}
+
+.second-part {
+    float: left;
+    clear: both;
+    padding-top:1%;
+    text-align: justify;
+}
+
+.sidebar {
+    margin-top:3%;
+}
+
+.sidebar ul {
+    padding-left: 1%;;
+}
+
+.sidebar ul li {
+    list-style: inside;
+    text-align: left;
+    font-style: italic;
+
+}
+
+.collapse-item {
+    float: left;
+    text-align: left;
+    width: 100%;
+}

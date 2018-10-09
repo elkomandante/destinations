@@ -1,0 +1,56 @@
+
+@media only screen and (max-width: 600px) {} 
+
+@media only screen and (min-width: 600px) {} 
+
+@media only screen and (min-width: 768px) {} 
+
+
+@media only screen and (max-width: 992px) {
+    #desktop-nav-menu {
+        display: none;
+    }
+    #mobile-nav-menu .fas.fa-bars {
+        color:#5d6e80;
+        float: right;
+        font-size: 28px;
+        padding:2%;
+    }
+    #mobile-nav-menu li {
+        float: left;
+        padding:2%;
+    }
+    
+    ul.mobile-dropdown  {
+        background-color: rgb(29,210,175, 0.3);
+        padding-left: 0;
+        display: none;
+    }
+
+    ul.mobile-dropdown li {
+        list-style-type: none;
+        padding:1%;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'roboto';
+        font-weight: 500;
+        border-bottom:1px solid #efefef;
+    }
+
+    #destinations-map {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    #mobile-nav-menu {
+        display: none;
+    }
+
+    ul.mobile-dropdown {
+        display: none;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {}

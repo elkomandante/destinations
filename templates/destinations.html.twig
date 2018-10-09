@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "../style/style.css"/>
+    <link rel = "stylesheet" href = "../style/responsive.css"/>
+    <link rel = "stylesheet" href = "../style/destinations.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-md-12" id = "socials-menu">
+            <div class = "row">
+                <div class = "col-lg-1 col-md-1 col-sm-1">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class = "col-lg-1 col-md-1 col-sm-1">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-12">
+            <div  id = "desktop-nav-menu">
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <li> LOGO </li>
+                    </div>
+                    <div class = "col-md-8">
+                        <ul>
+                            <li> <a href = "../index.html"> ПОЧЕТНА </a> </li>
+                            <li> <a class = "active" href = "#"> ДЕСТИНАЦИИ </a> </li>
+                            <li> <a href = "#"> КОНТАКТ </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id = "mobile-nav-menu">
+                <li> LOGO </li>
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <ul class = "mobile-dropdown">
+        <li>Почетна</li>
+        <li>Дестинации</li>
+        <li>Контакт</li>
+    </ul>
+
+    <div class = "row">
+        <div class = "col-12">
+            <div class = "search-for-destination"> <input type = "placehodler" class = "search-input" placeholder="Пребарувај дестинација"> <button>Пребарувај</button> </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-12">
+            <div class = "last-added">
+                <h5> Последно додадени </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        {% for destination in latestdestinations %}
+        <div class = "col-md-3">
+            <div class = "destinations-box">
+                <div class = "destination-map" style = "background-image:url('{{ destination.coverimagelocation }}')"></div>
+                <div class = "destination-description">
+                    <h5> {{ destination.slug }} </h5>
+                    <p>{{ destination.introtext }}<a href = "vatican.html" > Прочитај повеќе </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+
+
+
+    </div>
+
+    <div class = "row">
+        <div class = "col-12">
+            <div class = "destinations">
+                <h5> Дестинации </h5>
+            </div>
+        </div>
+    </div>
+
+    {% for destination in destinations %}
+        <div class = "col-md-3">
+            <div class = "destinations-box">
+                <div class = "destination-map" style = "background-image:url('{{ destination.coverimagelocation }}')"></div>
+                <div class = "destination-description">
+                    <h5> {{ destination.slug }} </h5>
+                    <p>{{ destination.introtext }}<a href = "vatican.html" > Прочитај повеќе </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
