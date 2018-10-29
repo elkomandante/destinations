@@ -6,12 +6,12 @@ namespace App\Admin;
 
 
 use App\Entity\Destination;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class DestinationAdmin extends AbstractAdmin
@@ -21,7 +21,7 @@ class DestinationAdmin extends AbstractAdmin
 
         $formMapper
             ->add('slug',TextType::class,['label'=>'Slug'])
-            ->add('introtext',TextareaType::class,['required'=>false])
+            ->add('introtext',CKEditorType::class,['required'=>false])
             ->add('file',FileType::class,['required'=>false ,'data_class'=>null,'label'=>'Cover Image'])
 
         ;
