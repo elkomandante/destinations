@@ -21,7 +21,9 @@ class DestinationAdmin extends AbstractAdmin
 
         $formMapper
             ->add('slug',TextType::class,['label'=>'Slug'])
+            ->add('shortContent',CKEditorType::class,['required'=>false])
             ->add('introtext',CKEditorType::class,['required'=>false])
+            ->add('bottomText',CKEditorType::class,['required'=>false])
             ->add('file',FileType::class,['required'=>false ,'data_class'=>null,'label'=>'Cover Image'])
 
         ;

@@ -1,93 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel = "stylesheet" href = "../style/style.css"/>
-    <link rel = "stylesheet" href = "../style/responsive.css"/>
-    <link rel = "stylesheet" href = "../style/destinations.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-</head>
+{% extends 'base.html.twig'%}
 
-<body>
-<div class = "container-fluid">
-    <div class = "row">
-        <div class = "col-md-12" id = "socials-menu">
-            <div class = "row">
-                <div class = "col-lg-1 col-md-1 col-sm-1">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class = "col-lg-1 col-md-1 col-sm-1">
-                    <i class="fas fa-envelope"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class = "row">
-        <div class = "col-md-12">
-            <div  id = "desktop-nav-menu">
-                <div class = "row">
-                    <div class = "col-md-4">
-                        <li> LOGO </li>
-                    </div>
-                    <div class = "col-md-8">
-                        <ul>
-                            <li> <a href = "../index.html"> ПОЧЕТНА </a> </li>
-                            <li> <a class = "active" href = "#"> ДЕСТИНАЦИИ </a> </li>
-                            <li> <a href = "#"> КОНТАКТ </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id = "mobile-nav-menu">
-                <li> LOGO </li>
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </div>
-    <ul class = "mobile-dropdown">
-        <li>Почетна</li>
-        <li>Дестинации</li>
-        <li>Контакт</li>
-    </ul>
+{% block main %}
+
 
     <div class = "row">
         <div class = "col-12">
-            <div class = "destination-heading">
-                <h2> Ватикан </h2>
+            <div class = "destination-heading" id = "myHeader">
+                <h2> Амстердам </h2>
             </div>
         </div>
     </div>
 
-    <div class = "row row-centered">
-        <div class = "col-md-10  col-centered">
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-12">
             <div class = "col-md-9">
-                <img class = "description-map" src = "../images/vatican.jpg"/>
-                <p class = "description-text"> &nbsp; &nbsp; &nbsp;  При разгледувањето на 'вечниот' Рим, Ватикан е неизбежна станица. Ватикан претставува дом на некои од најценетите уметнички и
-                    архитектонски остварувања. Седиштето на Католичката Црква може да се гордее со едниот од најубавите свропски па и светски
-                    плоштади, комплексот на најзначајните светски музеи како и најзначајната Католичка црква. Ватикан е познат токму по неговиот склоп
-                    и уредност, кои овозможиле на толку мал простор да се вклопат толку значајни градби. Градот-држава секоја година е посетуван од
-                    страна на милиони туристи.
-                </p>
-                <p class = "second-part">&nbsp; &nbsp; &nbsp;Посетата на Рим и Ватикан не би била комплетна доколку не ја посетите и базиликата св.Петра, место
-                    каде се наоѓаат некои од најпознатите светски уметнички дела како делото <strong>Pieta</strong> на Микеланџело. Кога веќе ја
-                    споменуваме уметоста, добро е да се посетат и Ватиканските музеи. Во нив се чува непроценливо богатство, меѓу кое и бројни
-                    славни дела како статуата <strong>'Laokanta'</strong>, фреските на Микеланџело <strong>'Создавање на човекот'</strong> и <strong>
-                        'Последниот суд' </strong>, во Сикстинската капела.
-                </p>
-
-                <div class="col-md-12">
+                {{ destination.introText|raw }}
+                <div class="section-background">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" style = "height:500px;">
+                        <div class="carousel-inner">
                             <div class="item active">
                                 <img src="https://media.wired.com/photos/5aa2f3af0810d969021d9be4/master/pass/VaticanHackathon-HR9MMG-web.jpg" alt="Los Angeles" style="width:100%;">
                             </div>
-
                             <div class="item">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg" alt="Chicago" style="width:100%;">
                             </div>
                         </div>
-
-                        <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"><i class="fas fa-chevron-left"></i></span>
                         </a>
@@ -96,75 +34,63 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="collapse-item">
-                    <a href="#demo"  data-toggle="collapse">Базилика св.Петар</a>
-                    <div id="demo" class="collapsed">
-                        Базиликата св.Петар е најголема црква во светот според бројот на верници кои може да ги прими, а најверојатно истата
-                        е и најубава. Сигурно се прашувате, која црква е поголема од оваа? Одговорот е базиликата <strong> Notre-Dame de la Paix</strong>
-                        во Yamoussokrou. Сепак, базиликата св.Петар и понатаму е најголема ако се смета само површината на затворенот простор.
-                        Изградена е по наредба на христијанскиот цар, Константин, на симболично место - место каде е погребан апостолот Петар, првиот папа.
-                        Црквата е завршена во средината на IV век. Поттикнат од лошата состојба на базиликата, во средината на XV век, папата Никола V
-                        го започнал обновувањето кое опфаќало и проширување на базиликата. Но, тој починал пред нејзиното завршување, со што била и запрена
-                        обновата.
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <a href="#demo1"  data-toggle="collapse">Базилика св.Петар <i class="fas fa-caret-down"></i></a>
-                    <div id="demo1" class="collapse">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <a href="#demo2"  data-toggle="collapse">Базилика св.Петар <i class="fas fa-caret-down"></i></a>
-                    <div id="demo2" class="collapse">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                </div>
+                {{ destination.bottomText|raw }}
             </div>
-
-
             <div class = "col-md-3">
-                <h5 class = "nearby"> Дестинации во близина на Ватикан </h5>
-                <ul>
-                    <li> <i class="fas fa-map-marked-alt"></i> 2,20 km <span>Rim</span></li>
-                    <li> <i class="fas fa-map-marked-alt"></i> 95,11 km <span>Oriveto</span></li>
-                    <li> <i class="fas fa-map-marked-alt"></i> 229,81 km <span>Firenca</span></li>
-                    <li> <i class="fas fa-map-marked-alt"></i> 263,21 km <span>Pisa</span></li>
-                    <li> <i class="fas fa-map-marked-alt"></i> 331,32 km <span>Castelsardo</span></li>
-                </ul>
-            </div>
-            <div class = "col-md-3 sidebar">
-                <h5 class = "currency"> Валута </h5>
-                <i class="fas fa-euro-sign"></i> <span> Евро </span>
-            </div>
-            <div class = "col-md-3 sidebar">
-                <h5 class = "facts">  Факти за Ватикан </h5>
-                <ul>
-                    <li>Населението на Ватикан пие повеќе вино од било кој народ во светот</li>
-                    <li>Во Ватикан се наоѓа најкратката пруга на светот</li>
-                    <li>Поседуваат телескоп во Аризона</li>
-                    <li>Ниту еден жител од населението не е роден во Ватикан - едноставно немаат болница</li>
-                    <li>Папата има своја гарда</li>
-                </ul>
+                <div class = "sidebar section-background places-near">
+                    <h5 class = "nearby"> Дестинации во близина на Ватикан </h5>
+                    <ul>
+                        <li> <i class="fas fa-map-marked-alt"></i> 166,96 km <span>Gent</span></li>
+                        <li> <i class="fas fa-map-marked-alt"></i> 172,67 km <span>Brugge</span></li>
+                        <li> <i class="fas fa-map-marked-alt"></i> 173,12 km <span>Bruxelles</span></li>
+                        <li> <i class="fas fa-map-marked-alt"></i> 316,00 km <span>Trier</span></li>
+                        <li> <i class="fas fa-map-marked-alt"></i> 318,69 km <span>Luxembourg</span></li>
+                    </ul>
+                </div>
+                <div class = "sidebar section-background">
+                    <h5 class = "currency"> Валута </h5>
+                    <i class="fas fa-euro-sign"></i> <span> Евро </span>
+                </div>
+                <div class = "sidebar section-background">
+                    <h5 class = "facts">  Факти за Ватикан </h5>
+                    <ul>
+                        <li>Населението на Ватикан пие повеќе вино од било кој народ во светот</li>
+                        <li>Во Ватикан се наоѓа најкратката пруга на светот</li>
+                        <li>Поседуваат телескоп во Аризона</li>
+                        <li>Ниту еден жител од населението не е роден во Ватикан - едноставно немаат болница</li>
+                        <li>Папата има своја гарда</li>
+                    </ul>
+                </div>
+                <div class = "sidebar section-background">
+                    <h5 class = "note"> напомена </h5>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id </li>
+                    </ul>
+                </div>
+                <div class = "sidebar section-background">
+                    <h5 class = "attachment"> dodatok </h5>
+                </div>
             </div>
         </div>
     </div>
-
-
-
 </div>
 
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-</body>
-</html>
+{% endblock %}

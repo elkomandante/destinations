@@ -19,7 +19,18 @@ class Destination
     /**
      * @ORM\Column(type="text")
      */
+    private $bottomText;
+
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private $introtext;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $shortContent;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -115,5 +126,41 @@ class Destination
     {
         $this->coverImageLocation = $coverImageLocation;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getBottomText()
+    {
+        return $this->bottomText;
+    }
+
+    /**
+     * @param mixed $bottomText
+     */
+    public function setBottomText($bottomText): void
+    {
+        $this->bottomText = $bottomText;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShortContent()
+    {
+        return $this->shortContent;
+    }
+
+    /**
+     * @param mixed $shortContent
+     */
+    public function setShortContent($shortContent): void
+    {
+        $this->shortContent = $shortContent;
+    }
+
+
+
+
 
 }

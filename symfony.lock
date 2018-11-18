@@ -2,6 +2,15 @@
     "cocur/slugify": {
         "version": "v3.1"
     },
+    "components/elfinder": {
+        "version": "3.1.1"
+    },
+    "components/jquery": {
+        "version": "3.3.1"
+    },
+    "components/jqueryui": {
+        "version": "1.12.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -71,6 +80,15 @@
     "friendsofsymfony/ckeditor-bundle": {
         "version": "1.2.0"
     },
+    "helios-ag/fm-elfinder-bundle": {
+        "version": "7.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "7.0",
+            "ref": "fb9152ee3538f968d9e0f2c763ecbe4ab63eff26"
+        }
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -79,6 +97,9 @@
     },
     "knplabs/knp-menu-bundle": {
         "version": "v2.2.1"
+    },
+    "kriswallsmith/assetic": {
+        "version": "v1.0.5"
     },
     "nikic/php-parser": {
         "version": "v4.0.4"
@@ -113,6 +134,9 @@
             "ref": "f7895777cd673fcefbc321a9063077a24e5df646"
         }
     },
+    "robloach/component-installer": {
+        "version": "0.2.3"
+    },
     "sonata-project/admin-bundle": {
         "version": "3.31",
         "recipe": {
@@ -145,6 +169,9 @@
     },
     "sonata-project/exporter": {
         "version": "1.9.1"
+    },
+    "studio-42/elfinder": {
+        "version": "2.1.42"
     },
     "symfony/asset": {
         "version": "v4.1.6"

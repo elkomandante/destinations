@@ -34,10 +34,13 @@ class DestinationsController extends AbstractController
     }
 
     /**
-     * @Route("/vatican", name="vatican")
+     * @Route("/destinations/{slug}", name="destination")
      */
-    public function vatican()
+    public function vatican(EntityManagerInterface $em,$slug)
     {
-        return $this->render('destination.html.twig');
+        $destination=$em->getRepository(Destination::class)->findOneBy(['slug'=>$slug]);
+        return $this->render('destination.html.twig',[
+            'destination'=>$destination
+        ]);
     }
 }

@@ -7,9 +7,11 @@
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^1.9",
         "friendsofsymfony/ckeditor-bundle": "^1.2",
+        "helios-ag/fm-elfinder-bundle": "^9.1",
         "ramsey/uuid-doctrine": "^1.5",
         "sonata-project/admin-bundle": "^3.40",
         "sonata-project/doctrine-orm-admin-bundle": "^3.6",
+        "symfony/asset": "*",
         "symfony/console": "*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "*",
@@ -24,10 +26,12 @@
         "symfony/web-server-bundle": "*"
     },
     "config": {
+
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "component-dir": "public/assets"
     },
     "autoload": {
         "psr-4": {
@@ -64,7 +68,7 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": "true",
             "require": "4.1.*"
         }
     }
