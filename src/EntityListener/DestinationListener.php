@@ -44,7 +44,7 @@ class DestinationListener
         if($file instanceof File)
         {
 
-            $name=sprintf("%s%s",Uuid::uuid4(),$file->guessExtension());
+            $name=sprintf("%s.%s",Uuid::uuid4(),$file->guessExtension());
             $file->move($this->destinationUploadFolder."/".$slug,$name);
             return  $name;
         }
