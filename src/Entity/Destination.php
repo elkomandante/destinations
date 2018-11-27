@@ -43,6 +43,29 @@ class Destination
      */
     private $slug;
 
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     */
+    private $closeDestinations;
+
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     */
+    private $currency;
+
+
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     */
+    private $facts;
+
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     */
+    private $note;
+
+
+
 
     private $file;
 
@@ -157,6 +180,78 @@ class Destination
     public function setShortContent($shortContent): void
     {
         $this->shortContent = $shortContent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCloseDestinations()
+    {
+        return $this->closeDestinations;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFacts()
+    {
+        return $this->facts;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param mixed $closeDestinations
+     */
+    public function setCloseDestinations($closeDestinations): void
+    {
+        $this->closeDestinations = $closeDestinations;
+    }
+
+    /**
+     * @param mixed $currency
+     */
+    public function setCurrency($currency): void
+    {
+        $this->currency = $currency;
+    }
+
+    /**
+     * @param mixed $facts
+     */
+    public function setFacts($facts): void
+    {
+        $this->facts = $facts;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @param mixed $note
+     */
+    public function setNote($note): void
+    {
+        $this->note = $note;
     }
 
 
