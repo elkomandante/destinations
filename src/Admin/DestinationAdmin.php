@@ -21,9 +21,14 @@ class DestinationAdmin extends AbstractAdmin
 
         $formMapper
             ->add('slug',TextType::class,['label'=>'Slug'])
-            ->add('shortContent',CKEditorType::class,['required'=>false])
-            ->add('introtext',CKEditorType::class,['required'=>false])
-            ->add('bottomText',CKEditorType::class,['required'=>false])
+            ->add('shortContent',CKEditorType::class,['required'=>false,'label'=>'Short Content : '])
+            ->add('introtext',CKEditorType::class,['required'=>false,'label'=>'Intro Text: '])
+            ->add('bottomText',CKEditorType::class,['required'=>false,'label'=>'Bottom Text'])
+            ->add('closeDestinations',CKEditorType::class,['required'=>false,'label'=>'Close Destinations(sidebar):'])
+            ->add('currency',CKEditorType::class,['required'=>false,'label'=>'Currencies(sidebar):'])
+            ->add('currency',CKEditorType::class,['required'=>false,'label'=>'Currencies(sidebar):'])
+            ->add('facts',CKEditorType::class,['required'=>false,'label'=>'Facts(sidebar):'])
+            ->add('note',CKEditorType::class,['required'=>false,'label'=>'Notes(sidebar):'])
             ->add('file',FileType::class,['required'=>false ,'data_class'=>null,'label'=>'Cover Image'])
 
         ;
