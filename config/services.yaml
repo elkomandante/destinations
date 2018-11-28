@@ -40,6 +40,13 @@ services:
         - { name: sonata.admin, manager_type: orm, label: Destinations }
         public: true
 
+    admin.destinationCategory:
+        class: App\Admin\DestinationCategoryAdmin
+        arguments: [~, App\Entity\DestinationCategory, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Destination Categories }
+        public: true
+
 
     App\EntityListener\DestinationListener:
         tags:

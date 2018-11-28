@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Form\Type\ModelType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
@@ -18,6 +19,7 @@ class DestinationAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
+        $destinationFieldOptions=['property'=>'name'];
 
         $formMapper
             ->add('slug',TextType::class,['label'=>'Slug'])
@@ -29,6 +31,7 @@ class DestinationAdmin extends AbstractAdmin
             ->add('currency',CKEditorType::class,['required'=>false,'label'=>'Currencies(sidebar):'])
             ->add('facts',CKEditorType::class,['required'=>false,'label'=>'Facts(sidebar):'])
             ->add('note',CKEditorType::class,['required'=>false,'label'=>'Notes(sidebar):'])
+            ->add('category',ModelType::class,$destinationFieldOptions)
             ->add('file',FileType::class,['required'=>false ,'data_class'=>null,'label'=>'Cover Image'])
 
         ;

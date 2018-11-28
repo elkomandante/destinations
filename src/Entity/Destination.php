@@ -17,18 +17,18 @@ class Destination
     private $id;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text",nullable=true)
      */
     private $bottomText;
 
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text",nullable=true)
      */
     private $introtext;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text",nullable=true)
      */
     private $shortContent;
 
@@ -63,6 +63,11 @@ class Destination
      * @ORM\Column(type="text",nullable=true)
      */
     private $note;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\DestinationCategory",inversedBy="destinations")
+     */
+    private $category;
 
 
 
@@ -252,6 +257,22 @@ class Destination
     public function setNote($note): void
     {
         $this->note = $note;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category): void
+    {
+        $this->category = $category;
     }
 
 
