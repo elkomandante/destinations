@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Destination;
+use App\Entity\DestinationCategory;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -14,9 +15,14 @@ class DestinationsController extends AbstractController
     /**
      * @Route("/", name="index")
      */
-    public function index()
+    public function index(EntityManagerInterface $entityManager)
     {
-        return $this->render('index.html.twig');
+        $destinationCategories=$entityManager->getRepository(DestinationCategory::class)->findAll();
+        return $this->render('index.html.twig',
+            [
+                'categories'=>$destinationCategories
+            ]
+        );
     }
 
 

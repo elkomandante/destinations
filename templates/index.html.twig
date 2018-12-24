@@ -38,30 +38,15 @@
             <div id = "holidays-type" style = "background-image:url('images/holiday-tips.jpg');">
                 <h2> Видови патувања </h2>
                 <div class = "row holidays-type">
+                    {% for category in categories %}
                     <div class = "col-md-2">
                         <div class = "summer hoverColor">
                             <i class="fas fa-umbrella-beach"></i>
                         </div>
-                        <h6> Beach </h6>
+                        <h6> {{ category.name }} </h6>
                     </div>
-                    <div class = "col-md-2">
-                        <div class = "city hoverColor">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h6> City </h6>
-                    </div>
-                    <div class = "col-md-2">
-                        <div class = "winter hoverColor">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <h6> Adventure </h6>
-                    </div>
-                    <div class = "col-md-2">
-                        <div class = "adventure hoverColor">
-                            <i class="fas fa-snowflake"></i>
-                        </div>
-                        <h6> Winter </h6>
-                    </div>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class DestinationCategoryAdmin extends AbstractAdmin
@@ -20,6 +21,8 @@ class DestinationCategoryAdmin extends AbstractAdmin
 
         $formMapper
             ->add('name',TextType::class,['label'=>'Category Name : '])
+            ->add('imageFile',FileType::class,['required'=>false ,'data_class'=>null,'label'=>'Cover Image'])
+
         ;
 
     }

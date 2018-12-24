@@ -25,8 +25,19 @@ class DestinationCategory
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Destination",mappedBy="category")
+     *
      */
     private $destinations;
+
+    private $imageFile;
+
+    private $imageLocation;
+
+
+    /**
+     * @ORM\Column(type="string", length=255,nullable=true)
+     */
+    private $image;
 
     public function __construct()
     {
@@ -65,6 +76,56 @@ class DestinationCategory
     {
         $this->destinations = $destinations;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param mixed $imageFile
+     */
+    public function setImageFile($imageFile): void
+    {
+        $this->imageFile = $imageFile;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image): void
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageLocation()
+    {
+        return $this->imageLocation;
+    }
+
+    /**
+     * @param mixed $imageLocation
+     */
+    public function setImageLocation($imageLocation): void
+    {
+        $this->imageLocation = $imageLocation;
+    }
+
+
 
 
 }

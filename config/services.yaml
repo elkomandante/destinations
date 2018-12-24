@@ -17,6 +17,8 @@ services:
         bind:
             $destinationsUploadFolder: '%kernel.project_dir%/public/%env(UPLOAD_PATH)%/destinations'
             $destinationsWebPath: '%env(UPLOAD_PATH)%/destinations/'
+            $destinationCategoriesUploadFolder: '%kernel.project_dir%/public/%env(UPLOAD_PATH)%/destination_categories'
+            $destinationCategoriesWebPath: '%env(UPLOAD_PATH)%/destinationCategories/'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -52,3 +54,8 @@ services:
         tags:
         - { name: doctrine.orm.entity_listener, entity: App\Entity\Destination, event: preFlush }
         - { name: doctrine.orm.entity_listener, entity: App\Entity\Destination, event: postLoad }
+
+    App\EntityListener\DestinationCategoryListener:
+        tags:
+        - { name: doctrine.orm.entity_listener, entity: App\Entity\DestinationCategory, event: preFlush }
+        - { name: doctrine.orm.entity_listener, entity: App\Entity\DestinationCategory, event: postLoad }
