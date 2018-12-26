@@ -1,0 +1,2 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'intl' (tried: c:/wamp64/bin/php/php7.2.10/ext/intl (The specified module could not be found.), c:/wamp64/bin/php/php7.2.10/ext/php_intl.dll (The specified module could not be found.)) in Unknown on line 0
