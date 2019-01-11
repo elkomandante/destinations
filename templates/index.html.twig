@@ -1,3 +1,4 @@
+
 {% extends 'base.html.twig' %}
 
 
@@ -10,7 +11,7 @@
                     <h3>Не ти треба магија за да исчезнеш. Се што ти треба е добра дестинација.</h3>
                     <div style = "display:flex; justify-content:center;"><div class = "show-on-map">Прикажи дестинации</div> </div>
                 </div>
-                <div class="swiper-slide" style = "background-image:url('images/banner-1.jpg'); min-height:600px;"></div>
+                <div class="swiper-slide" style = "background-image:url('images/banner-1.jpg'); min-height:600px; background-attachment: fixed;"></div>
             </div>
         </div>
     </div>
@@ -34,8 +35,10 @@
     </div>
 
     <div class = "row">
-        <div class = "col-md-12">
-            <div id = "holidays-type" style = "background-image:url('images/holiday-tips.jpg');">
+        <div class = "col-md-12" style = "padding-left:0; padding-right:0;">
+            <div id = "holidays-type" style = "background-image:url('images/holiday-tips.jpg');background-attachment: fixed;    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;">
                 <h2> Видови патувања </h2>
                 <div class = "row holidays-type">
                     {% for category in categories %}
@@ -49,6 +52,12 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class = "row>
+        <div class = "col-md-12"> 
+            <div id="includedContent"></div>
         </div>
     </div>
 
@@ -95,7 +104,6 @@
     </div>
 
 
-
 </div>
 
 
@@ -114,6 +122,11 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    $(function(){
+      $("#includedContent").load("maps.html"); 
+    });
+    </script> 
 </script>
 {% endblock %}
 

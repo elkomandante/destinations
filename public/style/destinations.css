@@ -74,21 +74,27 @@
     padding-right: 5%;
 }
 
+
 .destination-description h5{
     font-family: 'roboto';
     font-style: italic;
     font-weight: bold;
 }
 
-.destination-description p {
+.destination-description {
+    line-height: 1.2
+}
+
+.destination-description span {
     font-family: 'roboto';
-    font-size: 12px;
+    font-size: 11px !important;
 }
 
 .destination-description a {
     float: right;
     color: #1dd2af;
-    font-weight: bold
+    font-weight: bold;
+    font-size: 11px
 }
 
 .destination-heading h2 {
@@ -140,7 +146,6 @@
     padding-right: 1%;
 }
 
-.section-background span,
 .collapse-item a {
     color:#1dd2af;
     font-weight: 500;
